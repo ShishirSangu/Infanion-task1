@@ -5,15 +5,21 @@ body {
 
 }
 
+
+
+
 /* Top */
 
-#back {
-    text-decoration: underline;
+#NewDetails {
+    height: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+#backbutton {
     margin-left: 130px;
     font-family: Arial, sans-serif;
     margin-top: 10px;
-    height: 20px;
-    width: 40px;
     float: left;
     padding-top: 10px;
     color: black;
@@ -21,23 +27,17 @@ body {
 
 
 
-#template {
+#template-5 {
     text-align: center;
     font-family: Arial, sans-serif;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-right: 100px;
-
 }
-
-#top {
-    height: 55px;
-}
-
 
 /* NavBar */
 
-#navbar {
+/* #nav {
     display: flex;
     align-items: center;
     padding: 10px 20px;
@@ -45,86 +45,187 @@ body {
 
 #logo {
     color: rgb(31, 28, 28);
-    width: 90px;
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
     font-style: oblique;
 }
 
-
-#menu {
-    display: flex;
-    margin-left: 400px;
-    justify-content: center;
-    gap: 60px;
-    margin-right: 80px;
-    align-items: center;
-
-
+.navbar {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-right: 60px;
 }
 
-#menu a {
-    text-decoration: none;
+.navbar li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+    margin: 0 30px;
+}
+
+
+
+.navbar li a {
     padding: 10px;
-    padding: 5px 20px;
-    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
     color: black;
 }
 
-#menu a:hover {
-    background-color: #e08585;
+.navbar li a:hover {
+    border-radius: 4px;
+    background-color: rgb(206, 102, 102);
+} */
+
+
+
+nav {
+    height: 80px;
 }
+
+#logo {
+    position: absolute;
+    top: 50px;
+    left: 5%;
+    font-size: 30px;
+}
+
+nav ul {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 85px;
+    margin-right: 70px;
+}
+
+nav ul li a {
+    position: relative;
+    color: rgb(22, 19, 19);
+    font-size: 18px;
+    padding: 5px 0;
+    text-transform: uppercase;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+nav ul li a:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: rgb(17, 9, 9);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+}
+
+nav ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+label #btn,
+label #cancel {
+    color: rgb(17, 14, 14);
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
 
 
 /* Header */
 
 #header {
     text-align: center;
-    height: 400px;
+    padding: 50px;
     background-color: #b84444;
     color: white;
 }
 
+#header div {
+
+    width: 50%;
+    margin: auto;
+}
+
 #header h1 {
-    margin-top: 110px;
-    display: inline-block;
-    font-size: 30px;
-    font-weight: bold;
-    padding-bottom: 20px;
+    display: inline-flex;
+    padding-bottom: 10px;
     border-bottom: 2px solid white;
 }
 
+#header p {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+body h4 {
+    margin: auto;
+    width: 90%;
+    margin-top: 10px;
+    font-style: italic;
+    font-size: 20px;
+}
+
+body h4 img {
+    width: 20px;
+    height: 20px;
+}
 
 /* Body Of the content */
 
 .container {
-    margin-left: 80px;
+    width: 90%;
+    margin: auto;
     display: flex;
     justify-content: space-between;
-    /* Adds space between the two columns */
     padding: 20px;
-    margin-right: 80px;
 }
 
 .loremPara {
     width: 48%;
-    height: auto;
-    margin-right: 10px;
+
 }
 
 .loremPara img {
     width: 100%;
-    height: auto;
 }
 
+
+/* Part2 */
 .part2 {
-    width: 48%;
-    height: auto;
+    background-color: white;
+    padding-top: 20px;
 }
 
-.part2 h1 {
-    margin-top: 100px;
+.part2 div h3 {
+    width: 90%;
+    margin: auto;
+}
+
+.DOLORE {
+    width: 48%;
 }
 
 .lorem-button {
@@ -142,11 +243,27 @@ body {
 }
 
 
-.lorem-end h4 {
+.lorem-end a {
     float: right;
-    margin-right: 60px;
+    margin-right: 5%;
     font-style: italic;
     background-color: white;
+}
+
+.lorem-end {
+    background-color: white;
+    overflow: hidden;
+    padding-bottom: 10px;
+
+}
+
+.lorem-end a {
+    font-size: 20px;
+}
+
+.lorem-end img {
+    width: 20px;
+    height: 20px;
 }
 
 
@@ -154,15 +271,11 @@ body {
 
 .end {
     text-align: center;
-    height: 400px;
     background-color: #c7caa2;
     overflow: hidden;
+    padding: 50px;
 }
 
-
-.end h1 {
-    padding-top: 80px;
-}
 
 #p2 {
     border-top: 2px solid black;
@@ -170,14 +283,70 @@ body {
 }
 
 
-.lorem-end {
-    background-color: white;
-    overflow: hidden;
-}
+
 
 .end img {
     overflow: hidden;
     width: 30px;
     height: 30px;
     padding: 10px;
+}
+
+#ptag {
+    width: 40%;
+    margin: auto;
+}
+
+/* Media Query */
+
+@media (max-width: 1099px) {
+    label #btn {
+        display: block;
+
+    }
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 55%;
+        background: rgba(150, 148, 156, 0.5);
+        top: 130px;
+        left: -150%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    #check:checked~ul {
+        left: 0%;
+    }
+
+    #check:checked~label #btn {
+        display: none;
+    }
+
+    #check:checked~label #cancel {
+        display: block;
+    }
+
+    .container {
+        display: block;
+    }
+
+    .loremPara {
+        width: 100%;
+    }
+
+    .DOLORE {
+        width: 100%;
+    }
 }
